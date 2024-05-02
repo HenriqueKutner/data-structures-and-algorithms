@@ -1,10 +1,9 @@
-const arr = [2, 3];
+const numbers = [2, 3, 4, 5];
 
-function unshiftMethod(valuesToInsert) {
-  const currentSize = arr.length;
-  const newSize = currentSize + valuesToInsert.length;
-  for (let i = 0; i < newSize; i++) {
-    console.log(i);
+function unshiftMethod(values) {
+  for (let i = 0; i < numbers.length - 1; i++) {
+    const currentValue = numbers[i];
+    numbers[i + 1] = numbers[i];
   }
 }
 

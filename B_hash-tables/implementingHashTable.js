@@ -41,13 +41,23 @@ class HashTable {
         }
       }
     } // O(1)
-    return undefined;
+  }
+
+  keys() {
+    const justKeys = [];
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i]) {
+        justKeys.push(this.data[i][0][0]);
+      }
+    }
+    return justKeys;
   }
 }
 
-const myHashTable = new HashTable(50);
-myHashTable.set("grapes", 10000);
-myHashTable.get("grapes");
+const myHashTable = new HashTable(4);
+myHashTable.set("grapes", 10);
+myHashTable.set("banana", 10);
+myHashTable.keys();
 
 // myHashTable.printHash()
 
